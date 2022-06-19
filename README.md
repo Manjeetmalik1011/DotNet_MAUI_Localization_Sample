@@ -27,4 +27,6 @@ xmlns:resource="clr-namespace:NetMauiLocalizationSample.Resources.resx"
  </Label>
 
 
+![iOS](https://user-images.githubusercontent.com/100989615/174484081-4c8abbfa-54d2-4cda-b8ad-256ee8d0e477.jpg)
 
+![Android](https://user-images.githubusercontent.com/100989615/174484090-adaeedc1-dd49-4646-b8d7-ac41ec5bb27f.jpg)
