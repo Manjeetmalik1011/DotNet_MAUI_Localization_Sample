@@ -15,7 +15,16 @@ If you like to live dangerously, you can use our nightly feed to try out the lat
 # XAML usage
 In order to make use of the toolkit within XAML you can use this namespace:
 
-xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+xmlns:resource="clr-namespace:NetMauiLocalizationSample.Resources.resx"
+
+<Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="{x:Static resource:AppResources.lblEmail}" FontAttributes="Bold" />
+            <Span Text="{x:Static resource:AppResources.lblEmailValue}"  /> 
+        </FormattedString>
+    </Label.FormattedText>
+ </Label>
 
 
 
