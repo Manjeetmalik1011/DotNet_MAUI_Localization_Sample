@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#0c1b32" 
+             Title="{x:Static resource:AppResources.lblProfile}"
+             xmlns:resource="clr-namespace:NetMauiLocalizationSample.Resources.resx"
+             x:Class="NetMauiLocalizationSample.MainPage">
+
+
+<ContentPage.ToolbarItems>
+        <ToolbarItem Text="{x:Static resource:AppResources.lblHindiLanguage}" Clicked="HindiToolbarItem_Clicked"
+                 Order="Primary"
+                 Priority="0" />
+        <ToolbarItem Text="{x:Static resource:AppResources.lblEnglishLanguage}" Clicked="EnglishToolbarItem_Clicked"
+                 Order="Primary"
+                 Priority="1" />
+</ContentPage.ToolbarItems>
+
+    <Grid BackgroundColor="#0c1b32">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" /> 
+            </Grid.RowDefinitions>
+
+         <!-- 1. Profile picture-->
+        <StackLayout VerticalOptions="Start">
+           <!--<StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+               <Label Text="Profile View" Margin="10,10,10,0"  TextColor="#fff" Opacity="0.6" FontAttributes="Bold" FontSize="Title"></Label>
+                <Image Source="settings.png" HeightRequest="30" WidthRequest="30"
+                    Margin="0,10,10,0" 
+                    VerticalOptions="Start" HorizontalOptions="EndAndExpand">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Image.GestureRecognizers>
+               </Image>
+           </StackLayout>-->
+             <StackLayout Padding="40" VerticalOptions="StartAndExpand">
+                <Label Text=".NET MAUI LOCALIZATION" Margin="10,10,10,0"  TextColor="#fff"
+                       Opacity="0.6"
+                       FontAttributes="Bold" FontSize="Title"></Label>
+            </StackLayout>
+            <!--<StackLayout Padding="40" VerticalOptions="StartAndExpand">
+                <Frame CornerRadius="50"
+                       HeightRequest="100"
+                       WidthRequest="100"
+                       HorizontalOptions="Center"
+                       Padding="0"
+                       IsClippedToBounds="True">
+                    <Image Source="manjeet.jpg" Aspect="AspectFit"
+                       HorizontalOptions="Center" Opacity="0.7"
+                       VerticalOptions="Center" />
+                </Frame>
+            </StackLayout>-->
+        </StackLayout>
+       
+        
+
+         <!-- 2. Contact informaqtion frame-->   
+         <StackLayout Grid.Row="0" VerticalOptions="End" Margin="0,20,0,0" Padding="0,0,0,-50">
+            <Frame CornerRadius="40" TranslationY="-100" HasShadow="False"
+                   
+                   HeightRequest="650" VerticalOptions="End">
+                <!-- Blocks: 3 and 4 -->
+                <Grid Padding="25,10,25,0" RowSpacing="0"> 
+                   <Grid.ColumnDefinitions>
+                       <ColumnDefinition Width="*"/>
+                       <ColumnDefinition Width="*"/>
+                       <ColumnDefinition Width="*"/>
+                   </Grid.ColumnDefinitions> 
+                   <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                       <RowDefinition Height="Auto"/> 
+                   </Grid.RowDefinitions>
+                     
+                     <!-- 4. Contact information-->
+                     <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" 
+                            Text="{x:Static resource:AppResources.lblUserName}"
+                            FontAttributes="Bold" FontSize="30"/>
+                     <Label Grid.Row="1" Grid.Column="0" 
+                            Text="{x:Static resource:AppResources.lblCountryName}" TextColor="#a5a2a2" FontSize="16"/>
+                     <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" Padding="0,10,0,0" FontSize="16">
+                       <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resource:AppResources.lblEmail}" FontAttributes="Bold" />
+                                <Span Text="{x:Static resource:AppResources.lblEmailValue}"  /> 
+                            </FormattedString>
+                        </Label.FormattedText>
+                     </Label>
+                    <!--4. Contact information: Board inforation-->
+                   <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Padding="0,10,0,0" FontSize="16">
+                       <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resource:AppResources.lblPhone}" FontAttributes="Bold" />
+                                <Span Text="{x:Static resource:AppResources.lblPhoneValue}"  /> 
+                            </FormattedString>
+                        </Label.FormattedText>
+                     </Label>
+                    <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Padding="0,10,0,0" FontSize="16">
+                       <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resource:AppResources.lblGender}" FontAttributes="Bold" />
+                                <Span Text="{x:Static resource:AppResources.lblGenderValue}"  /> 
+                            </FormattedString>
+                        </Label.FormattedText>
+                     </Label>
+                    <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3" Padding="0,10,0,0" FontSize="16">
+                       <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{x:Static resource:AppResources.lblAboutUs}" FontAttributes="Bold" />
+                                <Span Text="{x:Static resource:AppResources.lblAboutUsValue}"  /> 
+                            </FormattedString>
+                        </Label.FormattedText>
+                     </Label>
+                    <!--4. Contact information: Follow button-->
+                    <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White"
+                            BackgroundColor="#0c1b32" Text="{x:Static resource:AppResources.btnFollow}" Margin="0,20,0,2" FontAttributes="Bold"
+                            FontSize="17" HeightRequest="45"/> 
+                 </Grid> 
+             </Frame> 
+        </StackLayout>
+       
+    </Grid> 
+</ContentPage>
